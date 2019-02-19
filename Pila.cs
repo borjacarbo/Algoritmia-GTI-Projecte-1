@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*=========================================================
+Tipus de Top elegit llista
+===========================================================*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,35 +11,71 @@ namespace Torres_de_Hanoi
 {
     class Pila
     {
-        public int Size { get; set; }
-        /* TODO: Elegir tipo de Top
-        public int Top { get; set; }
-        public String Top { get; set; }        
-        */
-        /* TODO: Elegir tipo de Elementos
-        public Disco[] Elementos { get; set; }
-        public List<Disco> Elementos { get; set; }
-        */
+
+        private List<Disco> list;
+
+        public int Size
+        {
+            get
+            {
+                return list.Count;
+            }
+            set
+            {
+            }
+        }
+        public int Top {
+            get
+            { 
+                int TopDisc = list.Count - 1;
+                Disco disco = list.ElementAt(TopDisc);
+                return disco.ValorInt;
+               }
+            set
+            {
+                Disco disco = new Disco();
+                disco.ValorInt = value;
+                list.Add(disco);
+            }
+        }
+        public List<Disco> Elementos {
+            get
+            {
+                return list;
+            }
+            set
+            {
+                list = value;
+            }
+        }
+        
 
         /* TODO: Implementar métodos */
         public Pila()
         {
-
+            list = new List<Disco>();
         }
 
         public void push(Disco d)
         {
-
+            Disco disco = new Disco();
+            list.Add(d);
         }
 
         public Disco pop()
         {
-            return null;
+
+            if (isEmpty()) return null;
+            int TopDisc = list.Count - 1;
+            Disco disco = list.ElementAt(TopDisc);
+            list.RemoveAt(TopDisc);
+            return disco;
         }                
 
         public bool isEmpty()
         {
-            return true;
+             if ( list.Count == 0) return true;
+            return false;
         }
 
     }
