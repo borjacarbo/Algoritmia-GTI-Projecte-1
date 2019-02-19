@@ -1,9 +1,8 @@
-﻿/*==============================================================
-Al hora de decidir-me pel tipus d'implementació de la classe Disco
-Escollim la de utilitzar els valors Integer.
-MOTIU: sembla més senzill
-================================================================ */
-
+﻿/*=========================================================
+Hem decidit utilitzar com a valor per als discos la variant 
+  the Int en lloc de la de string.
+El disc te un tamany acorde al valor utilitzat.
+===========================================================*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +13,10 @@ namespace Torres_de_Hanoi
 {
     class Disco
     {
-     // NotFiniteNumberException de discs
+
         public int n = 3; // número màxim de discs 
 
-        // TODO: Decidir tipo de Valor -> result per Int
+        // TODO: Decidir tipo de Valor
         private int valorInt = 0;
 
 
@@ -29,7 +28,7 @@ namespace Torres_de_Hanoi
             }
             set
             {
-                if ((value > 0) && (value <= n))
+                if ((value > 0) && (value < n))
                 {
                     valorInt = value;
                 }
