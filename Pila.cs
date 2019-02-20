@@ -26,16 +26,14 @@ namespace Torres_de_Hanoi
         }
         public int Top {
             get
-            { 
+            {
+                if (list.Count == 0) return 0;
                 int TopDisc = list.Count - 1;
                 Disco disco = list.ElementAt(TopDisc);
                 return disco.ValorInt;
                }
             set
             {
-                Disco disco = new Disco();
-                disco.ValorInt = value;
-                list.Add(disco);
             }
         }
         public List<Disco> Elementos {
@@ -45,7 +43,6 @@ namespace Torres_de_Hanoi
             }
             set
             {
-                list = value;
             }
         }
         
