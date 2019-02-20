@@ -28,7 +28,7 @@ namespace Torres_de_Hanoi
             }
             set
             {
-                if ((value > 0) && (value < n))
+                if ((value > 0) && (value <= n))
                 {
                     valorInt = value;
                 }
