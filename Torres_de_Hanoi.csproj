@@ -48,6 +48,10 @@
     <Compile Include="Pila.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestDisco.cs" />
+    <Compile Include="TestHanoi.cs" />
+    <Compile Include="TestPila.cs" />
+    <Compile Include="TestPrograma.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
