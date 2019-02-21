@@ -12,8 +12,9 @@ namespace Torres_de_Hanoi
         {
             Console.WriteLine("Hello World!");
 
-            new TestDisco();
-            new TestPila();
+            // new TestDisco();
+            // new TestPila();
+            new TestHanoi();
 
 
             // Keep the console window open in debug mode.
