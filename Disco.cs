@@ -14,7 +14,7 @@ namespace Torres_de_Hanoi
     class Disco
     {
 
-        public int n = 3; // número màxim de discs 
+        public int n = 4; // número màxim de discs 
 
         // TODO: Decidir tipo de Valor
         private int valorInt = 0;
