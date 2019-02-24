@@ -45,6 +45,8 @@ namespace Torres_de_Hanoi
                 foreach (Disco element in pila_A.Elementos) Console.WriteLine(" En Pila A " + element.ValorInt.ToString());
                 Console.WriteLine("...........");
                 foreach (Disco element in pila_B.Elementos) Console.WriteLine(" En Pila B " + element.ValorInt.ToString());
+                Console.WriteLine(" "); Console.WriteLine(" ");
+
                 hanoi.mover_disco(ref pila_A, ref pila_B);
                 Console.Write("Despres de menejar ");
                 Console.Write(" Top Pila_A: " + pila_A.Top.ToString());
@@ -52,11 +54,16 @@ namespace Torres_de_Hanoi
                 foreach (Disco element in pila_A.Elementos) Console.WriteLine(" En Pila A " + element.ValorInt.ToString());
                 Console.WriteLine("...........");
                 foreach (Disco element in pila_B.Elementos) Console.WriteLine(" En Pila B " + element.ValorInt.ToString());
+                Console.WriteLine(" "); Console.WriteLine(" ");
+
                 Console.WriteLine("Següent iteració");
 
             }
             Console.WriteLine();
-
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("····························································");
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
 
 
 
@@ -86,10 +93,21 @@ namespace Torres_de_Hanoi
                 foreach (Disco element in pila_A.Elementos) Console.WriteLine(" En Pila A " + element.ValorInt.ToString());
                 Console.WriteLine("...........");
                 foreach (Disco element in pila_B.Elementos) Console.WriteLine(" En Pila B " + element.ValorInt.ToString());
+                Console.WriteLine(" "); Console.WriteLine(" ");
                 Console.WriteLine("Següent iteració");
 
             }
             Console.WriteLine();
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("····························································");
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
+
+
+
+
+
+
 
             /*---------------------------------------------*/
             /*  TESTING:
@@ -100,6 +118,7 @@ namespace Torres_de_Hanoi
 
             Pila pila_C = new Pila();
             int passos;
+            Console.WriteLine("Abans d'executarXXXXXXXXXXXXXXXXXXXXXXXX");
 
             Console.WriteLine("........................ ");
             Console.WriteLine("Elements en la pila ini");
@@ -119,9 +138,10 @@ namespace Torres_de_Hanoi
             { 
                 Console.WriteLine(" " + Element.ValorInt.ToString());
             }
-            Console.WriteLine("Abans d'executarXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
 
             passos = hanoi.iterativo(pila_A.Size, ref pila_A, ref pila_C, ref pila_B);
+            Console.WriteLine("Despprés d'executar XXXXXXXXXXXXXXXXXXXXXXXX");
 
             Console.WriteLine("........................ ");
             Console.WriteLine("Elements en la pila ini");
@@ -141,9 +161,19 @@ namespace Torres_de_Hanoi
             {
                 Console.WriteLine(" " + Element.ValorInt.ToString());
             }
-            Console.WriteLine("Despprés d'executar XXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
 
             Console.WriteLine(" El número de passos calculat per iteració son: "  + passos.ToString() );
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("····························································");
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
+
+
+
+
+
+
 
             /*---------------------------------------------*/
             /*  TESTING:
@@ -172,6 +202,7 @@ namespace Torres_de_Hanoi
             pila_ini.push(disco_20);
             pila_ini.push(disco_10);
 
+            Console.WriteLine("Abans d'executarXXXXXXXXXXXXXXXXXXXXXXXX");
             Console.WriteLine("........................ ");
             Console.WriteLine("Elements en la pila ini");
             foreach (Disco Element in pila_ini.Elementos)
@@ -190,10 +221,11 @@ namespace Torres_de_Hanoi
             {
                 Console.WriteLine(" " + Element.ValorInt.ToString());
             }
-            Console.WriteLine("Abans d'executarXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
 
             passos = hanoi.iterativo(pila_ini.Size, ref pila_ini, ref pila_fin, ref pila_aux);
 
+            Console.WriteLine("Despprés d'executar XXXXXXXXXXXXXXXXXXXXXXXX");
             Console.WriteLine("........................ ");
             Console.WriteLine("Elements en la pila ini");
             foreach (Disco Element in pila_ini.Elementos)
@@ -212,9 +244,165 @@ namespace Torres_de_Hanoi
             {
                 Console.WriteLine(" " + Element.ValorInt.ToString());
             }
-            Console.WriteLine("Despprés d'executar XXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
 
             Console.WriteLine(" El número de passos calculat per iteració son: " + passos.ToString());
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("····························································");
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
+
+
+
+
+
+            /*---------------------------------------------*/
+            /*  TESTING:
+               recursivo(int n,  Pila ini, Pila fin, Pila aux) amb n = 4 */
+            /*---------------------------------------------*/
+            Console.WriteLine(" =================================================================================================");
+            Console.WriteLine("  recursivo(int n,  Pila ini, Pila fin, Pila aux) amb n = 4");
+
+
+            Pila ini = new Pila();
+            Pila fin = new Pila();
+            Pila aux = new Pila();
+
+
+            ini.push(disco_40);
+            ini.push(disco_30);
+            ini.push(disco_20);
+            ini.push(disco_10);
+
+            Console.WriteLine("Abans d'executarXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila ini");
+            foreach (Disco Element in ini.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila aux");
+            foreach (Disco Element in aux.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila fin");
+            foreach (Disco Element in fin.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine(" "); Console.WriteLine(" ");
+
+            passos = hanoi.recursivo(ini.Size, ref ini, ref fin, ref aux);
+
+            Console.WriteLine("Despprés d'executar XXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila ini");
+            foreach (Disco Element in ini.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila aux");
+            foreach (Disco Element in aux.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila fin");
+            foreach (Disco Element in fin.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine(" "); Console.WriteLine(" ");
+
+            Console.WriteLine(" El número de passos calculat per recursivitat son: " + passos.ToString());
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("····························································");
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*---------------------------------------------*/
+            /*  TESTING:
+               colaRecursiva(int n,  Pila ini, Pila fin, Pila aux) amb n = 4 */
+            /*---------------------------------------------*/
+            Console.WriteLine(" =================================================================================================");
+            Console.WriteLine("  colaRecursivo(int n,  Pila ini, Pila fin, Pila aux) amb n = 4");
+
+
+            Pila ini_1 = new Pila();
+            Pila fin_1 = new Pila();
+            Pila aux_1 = new Pila();
+
+
+            ini_1.push(disco_40);
+            ini_1.push(disco_30);
+            ini_1.push(disco_20);
+            ini_1.push(disco_10);
+
+            Console.WriteLine("Abans d'executarXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila ini_1");
+            foreach (Disco Element in ini_1.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila aux_1");
+            foreach (Disco Element in aux_1.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila fin_1");
+            foreach (Disco Element in fin_1.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine(" "); Console.WriteLine(" ");
+
+            passos = hanoi.recursivo(ini_1.Size, ref ini_1, ref fin_1, ref aux_1);
+
+            Console.WriteLine("Despprés d'executar XXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila ini_1");
+            foreach (Disco Element in ini_1.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila aux_1");
+            foreach (Disco Element in aux_1.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila fin_1");
+            foreach (Disco Element in fin_1.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine(" "); Console.WriteLine(" ");
+
+            Console.WriteLine(" El número de passos calculat per cola recursivitat son: " + passos.ToString());
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine("····························································");
+            Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            Console.WriteLine(" "); Console.WriteLine(" ");
 
         }
     }
