@@ -13,12 +13,13 @@ namespace Torres_de_Hanoi
         {
             if ((b.Top == 0) || (a.Top == 0))
             {
-                if ((b.Top == 0))
+
+                if (b.Top == 0)
                 {
                     Disco disco = a.pop();
                     b.push(disco);
                 }
-                if ((a.Top == 0))
+                else
                 {
                     Disco disco = b.pop();
                     a.push(disco);
@@ -31,7 +32,7 @@ namespace Torres_de_Hanoi
                     Disco disco = b.pop();
                     a.push(disco);
                 }
-                if (a.Top < b.Top)
+                else
                 {
                     Disco disco = a.pop();
                     b.push(disco);
@@ -39,10 +40,45 @@ namespace Torres_de_Hanoi
             }
         }
 
-        public int iterativo(int n, Pila ini, Pila fin, Pila aux)
+        public int iterativo(int delimitador, ref Pila ini, ref Pila fin, ref Pila aux)
         {
-            return 0;
-        }
+            int contador = 0;
 
+            if ((delimitador % 2) == 0) 
+                // cas Par
+            {
+                while (fin.Size < delimitador)
+                {
+                    this.mover_disco(ref ini, ref aux);
+                        contador++;
+                    if (fin.Size < delimitador)
+                    {
+                        this.mover_disco(ref ini, ref fin);
+                        contador++;
+                    }
+                    if (fin.Size < delimitador)
+                    {
+                        this.mover_disco(ref aux, ref fin);
+                        contador++;
+                    }
+                }
+            }
+            else  // cas impar
+            {
+                while (fin.Size < delimitador)
+                {
+                    this.mover_disco(ref ini, ref fin);
+                    contador++;
+                    if (fin.Size < delimitador)
+                    {
+                        this.mover_disco(ref ini, ref aux);
+                        contador++;
+                        this.mover_disco(ref aux, ref fin);
+                        contador++;
+                    }
+                }
+            }
+            return contador;
+        }
     }
 }
