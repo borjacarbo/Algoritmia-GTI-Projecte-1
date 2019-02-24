@@ -44,13 +44,13 @@ namespace Torres_de_Hanoi
         {
             int contador = 0;
 
-            if ((delimitador % 2) == 0) 
-                // cas Par
+            if ((delimitador % 2) == 0)
+            // cas Par
             {
                 while (fin.Size < delimitador)
                 {
                     this.mover_disco(ref ini, ref aux);
-                        contador++;
+                    contador++;
                     if (fin.Size < delimitador)
                     {
                         this.mover_disco(ref ini, ref fin);
@@ -80,5 +80,59 @@ namespace Torres_de_Hanoi
             }
             return contador;
         }
+
+        public int recursivo(int delimitador, ref Pila ini, ref Pila fin, ref Pila aux)
+        {
+            int contador = 0;
+
+            if (delimitador == 1)
+            {
+                Disco disco = ini.pop();
+                fin.push(disco);
+                contador++;
+            }
+            else
+            {
+                contador = contador + this.recursivo(delimitador - 1, ref ini, ref aux, ref fin);
+
+                Disco disco = ini.pop();
+                fin.push(disco);
+                contador++;
+
+                contador = contador + this.recursivo(delimitador - 1, ref aux, ref fin, ref ini);
+            }
+            return contador;
+        }
+
+
+        private void AccColaRecursiva(int delimitador, ref Pila ini, ref Pila fin, ref Pila aux, ref int contador, int iteracio)
+        {
+            if (delimitador == iteracio)
+            {
+                Disco disco = ini.pop();
+                fin.push(disco);
+                contador++;;
+            }
+            else
+            {
+              //  int Acc = contador + this.AccColaRecursiva(delimitador + 1, ref ini, ref aux, ref fin, ref contador, iteracio + 1);
+                this.AccColaRecursiva(delimitador + 1, ref ini, ref aux, ref fin, ref contador, iteracio + 1);
+
+                Disco disco = ini.pop();
+                fin.push(disco);
+                // Acc++;
+                contador++;
+
+                //  return Acc + this.AccColaRecursiva(delimitador + 1, ref aux, ref fin, ref ini, contador, iteracio + 1);
+                this.AccColaRecursiva(delimitador + 1, ref aux, ref fin, ref ini, ref contador, iteracio + 1);
+            }
+        }
+        public int colaRecursiva(int delimitador, ref Pila ini, ref Pila fin, ref Pila aux)
+        {
+            int contador = 0; 
+            this.AccColaRecursiva(delimitador, ref ini, ref fin, ref aux, ref contador, 1);
+            return contador;
+        }
+
     }
 }
