@@ -5,10 +5,3 @@ E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres_de_Hanoi\bin\Debug\Torres_d
 E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csprojAssemblyReference.cache
 E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.exe
 E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.pdb
-E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Algoritmia-GTI-Projecte-1-master\bin\Debug\Torres_de_Hanoi.exe.config
-E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Algoritmia-GTI-Projecte-1-master\bin\Debug\Torres_de_Hanoi.exe
-E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Algoritmia-GTI-Projecte-1-master\bin\Debug\Torres_de_Hanoi.pdb
-E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Algoritmia-GTI-Projecte-1-master\obj\Debug\Torres_de_Hanoi.csprojAssemblyReference.cache
-E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Algoritmia-GTI-Projecte-1-master\obj\Debug\Torres_de_Hanoi.csproj.CoreCompileInputs.cache
-E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Algoritmia-GTI-Projecte-1-master\obj\Debug\Torres_de_Hanoi.exe
-E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Algoritmia-GTI-Projecte-1-master\obj\Debug\Torres_de_Hanoi.pdb
