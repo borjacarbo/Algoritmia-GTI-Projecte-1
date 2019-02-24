@@ -68,9 +68,7 @@ namespace Torres_de_Hanoi
             /*---------------------------------------------*/
             Console.WriteLine(" =================================================================================================");
             Console.WriteLine("  de pila_A (plena) a Pila_B (buida) amb move_disco(pila_B, pila_A )");
-                   
-            Pila pila_C = new Pila();
-    
+                  
 
             for (int i = 0; i<loop; i++)
             {
@@ -92,6 +90,132 @@ namespace Torres_de_Hanoi
 
             }
             Console.WriteLine();
+
+            /*---------------------------------------------*/
+            /*  TESTING:
+                iterativo(int n,  Pila ini, Pila fin, Pila aux) amb n = 3 */
+            /*---------------------------------------------*/
+            Console.WriteLine(" =================================================================================================");
+            Console.WriteLine("  iterativo(int n,  Pila ini, Pila fin, Pila aux) amb n = 3");
+
+            Pila pila_C = new Pila();
+            int passos;
+
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila ini");
+            foreach (Disco Element in pila_A.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila aux");
+            foreach (Disco Element in pila_B.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila fin");
+            foreach (Disco Element in pila_C.Elementos)
+            { 
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("Abans d'executarXXXXXXXXXXXXXXXXXXXXXXXX");
+
+            passos = hanoi.iterativo(pila_A.Size, ref pila_A, ref pila_C, ref pila_B);
+
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila ini");
+            foreach (Disco Element in pila_A.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila aux");
+            foreach (Disco Element in pila_B.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila fin");
+            foreach (Disco Element in pila_C.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("Despprés d'executar XXXXXXXXXXXXXXXXXXXXXXXX");
+
+            Console.WriteLine(" El número de passos calculat per iteració son: "  + passos.ToString() );
+
+            /*---------------------------------------------*/
+            /*  TESTING:
+                iterativo(int n,  Pila ini, Pila fin, Pila aux) amb n = 4 */
+            /*---------------------------------------------*/
+            Console.WriteLine(" =================================================================================================");
+            Console.WriteLine("  iterativo(int n,  Pila ini, Pila fin, Pila aux) amb n = 4");
+
+
+            Pila pila_ini = new Pila();
+            Pila pila_fin = new Pila();
+            Pila pila_aux = new Pila();
+
+
+            Disco disco_10 = new Disco();
+            disco_10.ValorInt = 1;
+            Disco disco_20 = new Disco();
+            disco_20.ValorInt = 2;
+            Disco disco_30 = new Disco();
+            disco_30.ValorInt = 3;
+            Disco disco_40 = new Disco();
+            disco_40.ValorInt = 4;
+
+            pila_ini.push(disco_40);
+            pila_ini.push(disco_30);
+            pila_ini.push(disco_20);
+            pila_ini.push(disco_10);
+
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila ini");
+            foreach (Disco Element in pila_ini.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila aux");
+            foreach (Disco Element in pila_aux.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila fin");
+            foreach (Disco Element in pila_fin.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("Abans d'executarXXXXXXXXXXXXXXXXXXXXXXXX");
+
+            passos = hanoi.iterativo(pila_ini.Size, ref pila_ini, ref pila_fin, ref pila_aux);
+
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila ini");
+            foreach (Disco Element in pila_ini.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila aux");
+            foreach (Disco Element in pila_aux.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("........................ ");
+            Console.WriteLine("Elements en la pila fin");
+            foreach (Disco Element in pila_fin.Elementos)
+            {
+                Console.WriteLine(" " + Element.ValorInt.ToString());
+            }
+            Console.WriteLine("Despprés d'executar XXXXXXXXXXXXXXXXXXXXXXXX");
+
+            Console.WriteLine(" El número de passos calculat per iteració son: " + passos.ToString());
+
         }
     }
 }
