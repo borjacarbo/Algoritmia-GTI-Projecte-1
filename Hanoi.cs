@@ -115,15 +115,12 @@ namespace Torres_de_Hanoi
             }
             else
             {
-              //  int Acc = contador + this.AccColaRecursiva(delimitador + 1, ref ini, ref aux, ref fin, ref contador, iteracio + 1);
                 this.AccColaRecursiva(delimitador + 1, ref ini, ref aux, ref fin, ref contador, iteracio + 1);
 
                 Disco disco = ini.pop();
                 fin.push(disco);
-                // Acc++;
                 contador++;
 
-                //  return Acc + this.AccColaRecursiva(delimitador + 1, ref aux, ref fin, ref ini, contador, iteracio + 1);
                 this.AccColaRecursiva(delimitador + 1, ref aux, ref fin, ref ini, ref contador, iteracio + 1);
             }
         }
