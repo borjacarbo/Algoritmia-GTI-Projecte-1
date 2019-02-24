@@ -61,11 +61,18 @@ namespace Torres_de_Hanoi
 
         public Disco pop()
         {
-
-            if (isEmpty()) return null;
+            Disco disco;
+            if (isEmpty())
+            {
+                disco = new Disco();
+                disco.ValorInt = 0;
+            }
+            else
+            { 
             int TopDisc = list.Count - 1;
-            Disco disco = list.ElementAt(TopDisc);
+            disco = list.ElementAt(TopDisc);
             list.RemoveAt(TopDisc);
+            }
             return disco;
         }                
 
