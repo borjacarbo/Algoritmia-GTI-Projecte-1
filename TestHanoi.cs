@@ -375,7 +375,7 @@ namespace Torres_de_Hanoi
             }
             Console.WriteLine(" "); Console.WriteLine(" ");
 
-            passos = hanoi.recursivo(ini_1.Size, ref ini_1, ref fin_1, ref aux_1);
+            passos = hanoi.colaRecursiva(ini_1.Size, ref ini_1, ref fin_1, ref aux_1);
 
             Console.WriteLine("Despprés d'executar XXXXXXXXXXXXXXXXXXXXXXXX");
             Console.WriteLine("........................ ");

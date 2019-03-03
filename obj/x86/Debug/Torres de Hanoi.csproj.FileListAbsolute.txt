@@ -5,3 +5,10 @@ E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres_de_Hanoi\obj\x86\Debug\Torr
 E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres_de_Hanoi\obj\x86\Debug\Torres de Hanoi.csproj.CoreCompileInputs.cache
 E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres_de_Hanoi\obj\x86\Debug\ConsoleApplication.exe
 E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres_de_Hanoi\obj\x86\Debug\ConsoleApplication.pdb
+E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres de Hanoi\obj\x86\Debug\Torres de Hanoi.csproj.CoreCompileInputs.cache
+E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres de Hanoi\obj\x86\Debug\Torres de Hanoi.csprojAssemblyReference.cache
+E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres de Hanoi\bin\Debug\ConsoleApplication.exe.config
+E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres de Hanoi\bin\Debug\ConsoleApplication.exe
+E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres de Hanoi\bin\Debug\ConsoleApplication.pdb
+E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres de Hanoi\obj\x86\Debug\ConsoleApplication.exe
+E:\Assignatures\Curs_2\Algoritmia\Pràctiques\Torres de Hanoi\obj\x86\Debug\ConsoleApplication.pdb
